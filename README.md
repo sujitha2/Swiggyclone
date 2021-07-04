@@ -10,9 +10,9 @@ Here are some reasons why Vuejs is so popular:
          
 Commands to get started with Vuejs:
 
-i)  npm install -g @vue/cli => To install vuejs latest version 4.5.13
-ii) vue create your_projectname => to create a new project
-iii)npm run serve => To compile the project
-iv) npm run build => To build a production environment
-v)  npm run lint => To check for linting errors
+          i)  npm install -g @vue/cli => To install vuejs latest version 4.5.13
+          ii) vue create your_projectname => to create a new project
+          iii)npm run serve => To compile the project
+          iv) npm run build => To build a production environment
+          v)  npm run lint => To check for linting errors
 
