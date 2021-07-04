@@ -1,4 +1,4 @@
-I am going to create a project called Swiggyclonewhich is comparably similar to swiggy functionalities.
+I am going to create a project called Swiggyclone which is comparably similar to swiggy functionalities.
 
 Getting started with a Progressive Javascript Framework Vuejs.
 
@@ -10,7 +10,7 @@ Here are some reasons why Vuejs is so popular:
          
 Commands to get started with Vuejs:
 
-npm install -g @vue/cli => To install vuejs
+npm install -g @vue/cli => To install vuejs latest version 4.5.13
 vue create your_projectname => to create a new project
 npm run serve => To compile the project
 npm run build => To build a production environment
