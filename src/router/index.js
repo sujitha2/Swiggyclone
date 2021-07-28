@@ -1,20 +1,61 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import Swiggy from '../components/Swiggy.vue'
+import welcome from '../components/Welcome.vue'
+import signup from '../components/Signup.vue'
+import signin from '../components/Signin.vue'
+import menupage from '../components/Menupage.vue'
+import hotelpage from '../components/Hotelpage.vue'
+import finalpage from '../components/Finalpage.vue'
+import shoppingcart from '../components/ShoppingCart.vue'
+import header from '../components/Header.vue'
+import store from '../components/Store.vue'
+import empty from '../components/Emptycart.vue'
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    name : 'Hotelpage',
+    component: hotelpage
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    name:'ShoppingCart',
+    component:shoppingcart,
+  },
+  {
+    name: 'Finalpage',
+    component: finalpage
+  },
+  {
+    name:'Swiggy',
+    component:Swiggy,
+  },
+  {
+    name:'Emptycart',
+    component:empty
+  },
+  {
+    name:'Store',
+    component:store,
+  },
+  {
+    name:'Header',
+    component:header,
+  },
+  {
+    name:'Signup',
+    component:signup
+  },
+  {
+    name: 'Welcome',
+    component: welcome
+  },
+  {
+    name: 'Menupage',
+    component:menupage
+  },
+  {
+    name:'Signin',
+    component:signin
+  },
 ]
 
 const router = createRouter({
