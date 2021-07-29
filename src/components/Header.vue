@@ -222,8 +222,9 @@ export default {
   box-shadow: 3px 3px rgba(136, 134, 134,0.3);
   background-image: linear-gradient(to bottom,rgb(248, 147, 24),rgb(245, 167, 22));
   height:fit-content;
-  width:600px;
+  width:300px;
   margin-top: 2cm;
+  margin-left:-3.5cm;
 }
 }
 @media only screen and (min-width:700px) and (max-width: 800px) {
@@ -303,6 +304,7 @@ export default {
   height:fit-content;
   width:600px;
   margin-top: 2cm;
+  margin-left:-8cm;
 }
 }
 </style>

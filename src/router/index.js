@@ -17,6 +17,10 @@ const routes = [
     component:Swiggy,
   },
   {
+    name:'Header',
+    component:header,
+  },
+  {
     name : 'Hotelpage',
     component: hotelpage
   },
@@ -35,10 +39,6 @@ const routes = [
   {
     name:'Store',
     component:store,
-  },
-  {
-    name:'Header',
-    component:header,
   },
   {
     name:'Signup',
