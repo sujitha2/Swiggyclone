@@ -40,7 +40,7 @@ export default createStore({
     {id: 19 , name:"Oothapam" , url:oothapam ,price:20,rate:4.6,},] , 
 
     cartItemCount : 0 ,
-    cartItems: [ ]
+    cartItems: [ ],
   },
   mutations:{
     increase(state,payload){

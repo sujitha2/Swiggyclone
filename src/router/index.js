@@ -13,6 +13,10 @@ import empty from '../components/Emptycart.vue'
 
 const routes = [
   {
+    name:'Swiggy',
+    component:Swiggy,
+  },
+  {
     name : 'Hotelpage',
     component: hotelpage
   },
@@ -23,10 +27,6 @@ const routes = [
   {
     name: 'Finalpage',
     component: finalpage
-  },
-  {
-    name:'Swiggy',
-    component:Swiggy,
   },
   {
     name:'Emptycart',

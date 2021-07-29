@@ -1,4 +1,5 @@
 <template>
+<div>
   <link
     href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     rel="stylesheet"
@@ -9,8 +10,9 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
     crossorigin="anonymous"
   />
-      <h2 id="finalhead">We hope you enjoyed your delicious food!</h2>
-      <h2 id="finalhead1">Now help us by rating our service!</h2>
+  <div>
+      <h3 id="finalhead">You succesfully placed your order !</h3>
+      <h3 id="finalhead1">Now help us by sharing your experience</h3>
       <br />
       <div class="box">
         <div class="starbox">
@@ -40,13 +42,15 @@
           <button id="skip" @click="skip">Skip</button>
           </div>
       </div>
+      </div>
+      </div>
 </template>
 
 <script>
 export default {
   methods: {
     skip() {
-      this.$router.push({ name: "Welcome" });
+      this.$router.push({ name: "Swiggy" });
     },
     submit() {
       var empt = document.forms["form"]["text"].value;
@@ -55,7 +59,7 @@ export default {
         return false;
       } 
       else {
-        this.$router.push({ name: "Welcome" });
+        this.$router.push({ name: "Swiggy" });
       }
     },
   },
@@ -67,8 +71,6 @@ export default {
   background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgKCAgICAgIBwcHCg0HBwcHCA8ICQcNFREWFiARHxUYHSggGBolGxMfITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0NDw0NDysZFRkrKzc3NzcrKzctLS0tKysrLSstLSsrKysrKysrKy0rKys3LSsrKysrKysrKysrKysrK//AABEIAL0BCwMBIgACEQEDEQH/xAAaAAEBAQEBAQEAAAAAAAAAAAABAgADBAcF/8QAGxABAQEAAwEBAAAAAAAAAAAAAAERAgMygSL/xAAaAQADAQEBAQAAAAAAAAAAAAAAAQIDBAUG/8QAGBEBAQEBAQAAAAAAAAAAAAAAAAERAhL/2gAMAwEAAhEDEQA/APlEVExUD6PlcVERcLG3KoqJioWN+auKlRFRONeauVTnKqUrG06XKqVGsnGs6XranW0sP2rRanW0sK9NaLRam08RemtTTUUYx6oqOSqmnjHqpqKq1NPGHVTUVVRTYdJ5Iq6imw6TU1SaGHSEVdTTY9Irpwn5n1zrp1+Z9NhX6EVExUaPa5VFREXCxrzVRURFQsayritRCWNZVmVMpLGsq5W1LFi50ttRraWH6VotGgsL0dFFFoxF6a1NrUWjGdoqa1FDLqioqqimx6oqKqpoY9JqKqppsehUVVTQx6TUVdRTY9Jrp1z8xzrp1+YGNe6VcRFNnryqiomGFjWVcMTDA0lWYmKLGkplVKg6WNJVFOnSxWnW0aNLD9KGjRpYXo2pbQMTa1FrWpoxFrVNKaWM7U0U1NGMrRU0poxlU1NVU08Y1NTVVNDKoqaupoY9Jq+vzEVfX5n0MenuioiKjfHqxRghgxrKsxMMGNJVSqQdJcqimViVKrSliVqmSww9LBiwtYWtoIrRRSKSLRU01IRaKLSmkzoqaaKGVSmqqaGdTU1VTQyqamqTQyqa6dfmOddOvzAxr2RUSY6XpyqUmGBpKqFJJeqZOkYqVTaGSrVadS2g9VrJOkekWtrA9YVqCTawrVJJtahqCRWqFVJIoqaqpoZ1NFNBM6mpqk0M6mpqqmhlU104eYir4eYGVeuEQul6EVFJhNpKWBJWkpIPVaySStJTp0j0sCFaQzEesGFpFrUMCS1DCpTRRWYkVIpSGdAIJFTU1VTQzqamqqaGVFXw8xFXw8wMq9SomGOp3SqhiSGkqmEpCtYhiMkMD0sCStOtoYj1TBtI9a0MxFoZgRMmmhKaARQmipNCUUA0BFTU00UazqaDUhlRV8PMRV8PMDOvTFIVHU7IYQQuUtAQamSoKZmYjLAkosGFMswSZDAgzMLSKighKWqTQSaKGBJrJpopM6mimgIqamqqaGVFXw8xzrpw8w2VegxJdTriimUhcqmBCoWjMFKYEjYhiUWDFT0sGIazMNIa1DMmkGYETUMKSaAaCTQKRSRU0EEipqaqppsqmunDzHOunX5hxlXYhnU6YoxJgXFEawVFMGClHUsStVpS2keqYaNI9UydZJnQwIEMySDMCJgakksKzEQSaKSKKmmihnU0FNDKprp1+Z9cq6cL+Z9Ux6d4UmOl1RTAhUJ1JClMG0KlUUklaWDEZZmI9ZmYjZgyQzMCDMwqSrBgRNQQSaKK1ARQm1SaGdTU2qqaGXVTXTr8z65V04X8xUY9V2IhdDpioyVBcYgg5SwIUYdSSVpYQkZYMSiwYgQzJNmagia0MxUMGCSYUpCaAQSKKmmpNlRUVVTTZdVNdOvzHKunX5n1TDqv/9k=);
   background-clip: text;
   color: transparent;
-  margin-top: 2cm;
-  padding-top: 1cm;
   font-family: "Itim";
 }
 #finalhead1 {
@@ -115,8 +117,8 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 13cm;
-  margin-right: 13cm;
+  margin-left: 3cm;
+  margin-right: 3cm;
 }
 
 .starbox {
@@ -127,8 +129,6 @@ export default {
   align-items: center;
   display: flex;
   flex-direction: row-reverse;
-  margin-left: 4cm;
-  margin-right: 4cm;
 }
 .hide {
   display: none;
