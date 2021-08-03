@@ -10,11 +10,19 @@ import shoppingcart from '../components/ShoppingCart.vue'
 import header from '../components/Header.vue'
 import store from '../components/Store.vue'
 import empty from '../components/Emptycart.vue'
-
+import Search from '../components/Searchbar.vue'
 const routes = [
   {
     name:'Swiggy',
     component:Swiggy,
+  },
+  {
+    name:'Searchbar',
+    component:Search
+  },
+  {
+    name:'Header',
+    component:header,
   },
   {
     name : 'Hotelpage',
@@ -35,10 +43,6 @@ const routes = [
   {
     name:'Store',
     component:store,
-  },
-  {
-    name:'Header',
-    component:header,
   },
   {
     name:'Signup',

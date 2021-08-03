@@ -1,5 +1,5 @@
 <template>
-<div id="signup">
+<div>
   <h2 id="head">Get Started with Swiggy !</h2>
   <form id="form1" return @submit.stop.prevent="signup()">
       <input required id="name" v-model="names" placeholder="Name" />
@@ -118,15 +118,54 @@ export default {
   margin-left:5cm;
   margin-top:1cm
 }
-#signup{
-  box-sizing: border-box;
-  -webkit-box-sizing:border-box;
-  position:absolute;
-  border:1px rgb(182, 181, 181) solid;
-  box-shadow: 3px 3px rgba(136, 134, 134,0.3);
-  background-image: linear-gradient(to bottom,rgb(248, 147, 24),rgb(245, 167, 22));
-  height:fit-content;
-  width:600px;
-  margin-top: 2cm;
+@media only screen and (max-width:600px){
+  #head{
+  margin-left:1cm;
+  margin-top:1cm;
+  font-size: 20px;
+}
+#button{
+  margin-left: 1cm;
+  background:black;
+  color:white; 
+  font-weight: bold;
+  margin-bottom:1cm;
+  margin-top: -1cm;
+}
+#name{
+  border: 2px solid rgb(0,0,49);
+  border-style: outset;
+  height:25px;
+  width:4cm;
+}
+#phno{
+  border: 2px solid rgb(0,0,49);
+  border-style: outset;
+ height:25px;
+  width:4cm;
+}
+#username{
+  border: 2px solid rgb(0,0,49);
+  border-style: outset;
+  height:25px;
+  width:4cm;
+  margin-bottom: -2cm;
+}
+#password{
+  border: 2px solid rgb(0,0,49);
+  border-style: outset;
+  height:25px;
+  width:4cm;
+}  
+#address{
+  border: 2px solid rgb(0,0,49);
+  border-style: outset;
+  height:25px;
+  width:4cm;
+}
+#form1{
+  margin-left:1.8cm;
+  margin-top:1cm
+}
 }
 </style>
