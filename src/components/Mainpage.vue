@@ -97,7 +97,7 @@ export default {
   box-shadow: 3px 3px rgba(136, 134, 134,0.3);
 }
 }
-@media only screen and (min-width : 600px) and (max-width :1030px){
+@media only screen and (min-width : 700px) and (max-width :1030px){
   #hotelpic{
   width: 200px;
   aspect-ratio: auto 250 / 160;

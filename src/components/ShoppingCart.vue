@@ -10,7 +10,7 @@
     crossorigin="anonymous"
   />
   <div>
-  <div>
+  <div v-if="totalPrice !== 0">
       <h3>Cart</h3>
           <ul style="list-style-type:none" class="ul">
               <li v-for="item in cartItems" :key="item.id" class="li">
@@ -33,16 +33,18 @@
   <button class="btn btn-primary" @click="showPopup = false">Close</button>
   <Feedback id="Feedback" v-show="showPopup"></Feedback>
   </div>
+ <Emptycart v-else />
   </div>
 </template>
 
 <script>
-import{mapState} from 'vuex'
 import Feedback from './Finalpage.vue'
+import Emptycart from './Emptycart.vue'
 export default {
     name:'ShoppingCart',
     components:{
         Feedback,
+        Emptycart
     },
     data(){
         return{
@@ -51,14 +53,9 @@ export default {
         }
     },
     computed: {
-        ...mapState({
-            cartItems: (state) => state.cartItems ,
-        }),
-        totalPrice(){
-            let price = 0;
-            this.$store.state.cartItems.map(el => { price += el ["quantity"] * el ["price"] });
-            return price;
-        },
+        cartItems(){
+            return this.$store.state.cartItems ;
+        }
     },
     methods:{
     foodDetails(item){
@@ -66,11 +63,19 @@ export default {
     },
     add(){
       this.$store.dispatch("increase", this.details);
+      console.log(this.$store.state.cartItems)
     },
     remove(){
       this.$store.dispatch("decrease", this.details);
     },
-    }
+    totalPrice(){
+        const totalprice = this.$store.state.cartItems.reduce((acc,item) => {
+            acc += item["price"] * item["quantity"];
+            return acc;
+        }, 0);
+        console.log(totalprice);
+        },
+    },
 }
 </script>
 
@@ -84,7 +89,23 @@ export default {
     padding:20px
 }
 #Feedback{
-
     margin:0 10cm 0 10cm;
+}
+.fa-shopping-cart{
+    font-size: 120px;
+    background-image: linear-gradient(to bottom,rgb(23, 216, 216),darkcyan);
+    background-clip: text;
+    color:transparent;
+    padding:0 0 20px 0;
+}
+.fa-tired{
+    color:orangered
+}
+#empty{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top:5cm;
 }
 </style>
