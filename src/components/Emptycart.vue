@@ -18,11 +18,7 @@
 </template>
 
 <script>
-import Header from './Header.vue'
 export default {
-    components:{
-        Header,
-    }
 }
 </script>
 <style scoped>
@@ -42,5 +38,13 @@ export default {
     flex-wrap: wrap;
     align-items: center;
     margin-top:5cm;
+}
+@media only screen and (max-width:600px){
+    h2{
+        font-size:20px
+    }
+    h4{
+        font-size:15px
+    }
 }
 </style>
