@@ -13,11 +13,10 @@
  </div>
  <div class="parent">
  <div id="a">
-   <Searchbar v-show="showSearchbar"></Searchbar>
- <div id="search" @click="showSearchbar = true">
- <span id="searchimg" class="fas fa-search"></span>
- <span id="searchname" >Search</span> 
- </div>
+   <div id="search" @click="search">
+  <span id="searchimg" class="fas fa-search"></span>
+  <span id="searchname">Search</span>
+  </div>
  </div>
   <div id="a">  
     <div @click="cart()" id="cart">
@@ -38,21 +37,22 @@
 </template>
 <script>
 import Signup from './Signup.vue'
-import Searchbar from './Searchbar.vue'
-
 export default {
   name : 'Swiggy',
     methods: {
     cart(){
       this.$router.push({name: 'ShoppingCart'})
     },
+     search(){
+      this.$router.push({name: 'Searchbar'})
+    }
     },
     props:["names"],
   data(){
     return{
       showPopup: false,
       signup:' Signup ',
-      showSearchbar:false,
+
     }
     },
     computed:{
@@ -63,13 +63,13 @@ export default {
   components:
   {
     Signup,
-    Searchbar
   },
   }
 </script>
 <style scoped>
 #searchname{
     font-size:18px;
+    color:white
 }
 #offername{
     font-size:18px;   
@@ -81,13 +81,13 @@ export default {
   flex-direction: row;
 }
 .logo{
- flex-basis:70%;
+ flex-basis:60%;
 }
 .parent{
   display:flex;
   flex-direction: row;
   flex-flow:row wrap;
-  flex-basis:30%;
+  flex-basis:40%;
   justify-content: space-evenly;
   align-self: auto;
 }
@@ -106,18 +106,18 @@ export default {
   margin-left:1cm;
 }
 #searchimg{
-  font-size:17px
+  font-size:17px;
+  color:white
 }
 #offerimg{
   font-size:16px
 }
-#search{
-  color:white;
-  margin-top : 0.4cm;
-}
 #cart{
     color:white;
     margin-top : 0.4cm;
+}
+#search{
+  margin-top : 0.4cm;
 }
 #offer{
     color:white;
@@ -147,10 +147,10 @@ export default {
   margin-top: 3.5cm;
   margin-left:-25cm;
 }
-@media only screen and (max-width: 600px) {
- #searchname{
-    font-size:12px;
-}
+@media only screen and (max-width: 500px) {
+  #searchname{
+    font-size:12px
+  }
 #offername{
     font-size:12px;   
 }
@@ -161,13 +161,13 @@ export default {
   flex-direction: row;
 }
 .logo{
- flex-basis:45%;
+  flex-basis:35%
 }
 .parent{
   display:flex;
   flex-direction: row;
   flex-flow:row wrap;
-  flex-basis:50%;
+  flex-basis:65%;
   justify-content: space-evenly;
 }
 .child{
@@ -190,10 +190,6 @@ export default {
 #offerimg{
   font-size:12px
 }
-#search{
-  color:white;
-  margin-top : 0.2cm;
-}
 #cart{
     color:white;
     margin-top : 0.2cm;
@@ -201,6 +197,9 @@ export default {
 #offer{
     color:white;
     margin-top : 0.2cm;
+}
+#search{
+  margin-top : 0.2cm;
 }
 .fa-shopping-cart{
   font-size:15px;
@@ -222,13 +221,15 @@ export default {
   box-shadow: 3px 3px rgba(136, 134, 134,0.3);
   background-image: linear-gradient(to bottom,rgb(248, 147, 24),rgb(245, 167, 22));
   height:fit-content;
-  width:600px;
+  width:300px;
   margin-top: 2cm;
+  margin-left:-3.5cm;
 }
 }
-@media only screen and (min-width:700px) and (max-width: 800px) {
- #searchname{
+@media only screen and (min-width:510px) and (max-width: 800px) {
+   #searchname{
     font-size:18px;
+    color:white
 }
 #offername{
     font-size:18px;   
@@ -264,14 +265,14 @@ export default {
   margin-left:0.5cm;
 }
 #searchimg{
-  font-size:12px
+  font-size:12px;
+  color:white
 }
 #offerimg{
   font-size:12px
 }
 #search{
-  color:white;
-  margin-top : 0.2cm;
+  margin-top : 0.4cm;
 }
 #cart{
     color:white;
@@ -280,6 +281,10 @@ export default {
 #offer{
     color:white;
     margin-top : 0.2cm;
+}
+#search{
+  color:white;
+  margin-top : 0.2cm;
 }
 .fa-shopping-cart{
   font-size:21px;
@@ -303,6 +308,7 @@ export default {
   height:fit-content;
   width:600px;
   margin-top: 2cm;
+  margin-left:-8cm;
 }
 }
 </style>
