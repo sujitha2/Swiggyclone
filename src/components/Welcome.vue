@@ -85,7 +85,7 @@ export default{
     background-color:rgba(0,0,49,0.3);
 }
 }
-@media only screen and (min-width:600px) and (max-width:1024px){
+@media only screen and (min-width:700px) and (max-width:1024px){
     .childs{
     height:100px;
     width: 150px;

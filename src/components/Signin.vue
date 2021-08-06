@@ -72,14 +72,14 @@ export default {
 #username{
   border: 2px solid rgb(0,0,49);
   border-style: outset;
-  height:30px;
-  width:6cm;
+  height:10px;
+  width:2cm;
 }
 #password{
   border: 2px solid rgb(0,0,49);
   border-style: outset;
-  height:30px;
-  width:6cm;
+  height:10px;
+  width:2cm;
 }
 
 </style>
