@@ -14,16 +14,16 @@ import Search from '../components/Searchbar.vue'
 import details from '../components/Details.vue'
 const routes = [
   {
+    name:'Swiggy',
+    component:Swiggy,
+  },
+  {
     name : 'Hotelpage',
     component: hotelpage
   },
   {
     name:'Details',
     component:details,
-  },
-  {
-    name:'Swiggy',
-    component:Swiggy,
   },
   {
     name:'Searchbar',
