@@ -33,12 +33,12 @@ export default createStore({
     {id: 12 , name:"Mutton Briyani" , url:muttonbriyani  ,price:140,rate:4.8,desc:"Best Food I have ever had"},
     {id: 13 , name:"Curd rice" , url:curdrice  ,price:50,rate:4.1,desc:"Very good taste"}],
 
-    Dinner: [{id: 14 , name:"Dosa" , url:dosa ,price:20,rate:4.3,desc:"Tastiest food ever"},
+    Dinner: [{id: 14 , name:"Ghee Dosa" , url:dosa ,price:20,rate:4.3,desc:"Tastiest food ever"},
     {id: 15 , name:"Poori" , url:poori ,price:30,rate:4.2,desc:"Best Food I have ever had"},
-    {id: 16 , name:"Chapathi" , url:chapathi ,price:20,rate:4.1,desc:"Very good taste"},
+    {id: 16 , name:"Egg Chapathi" , url:chapathi ,price:20,rate:4.1,desc:"Very good taste"},
     {id: 17 , name:"Roti" , url:roti  ,price:40,rate:4.9,desc:"Tastiest food ever"},
     {id: 18 , name:"Idly" , url:idly  ,price:20,rate:4.5,desc:"Best Food I have ever had"},
-    {id: 19 , name:"Oothapam" , url:oothapam ,price:20,rate:4.6,},] , 
+    {id: 19 , name:"Ghee Oothapam" , url:oothapam ,price:20,rate:4.6,},] , 
 
     cartItemCount : 0 ,
     cartItems: [ ],
