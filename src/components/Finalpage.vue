@@ -128,7 +128,6 @@ export default {
   margin-left: 12cm;
   margin-right: 12cm;
 }
-
 .starbox {
   padding: 20px 30px;
   border-style: solid;
@@ -155,5 +154,141 @@ export default {
 }
 .hide:checked ~ #label {
   color: gold;
+}
+@media only screen and (min-width:500px) and (max-width:600px){
+.box {
+  padding: 10px 50px 30px 50px;
+  border-style: solid;
+  border-color: black;
+  background: rgb(32, 28, 28);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1cm;
+  margin-right: 1cm;
+}
+#feedback {
+  border-style: solid;
+  border-color: grey;
+  height: 3cm;
+  width: 8cm;
+}
+#feedbackbtn {
+  padding: 10px 50px;
+  background: gray;
+  margin-top: 0.5em;
+  margin-left: 2cm;
+  font-weight: 700;
+}
+#skip {
+  margin-bottom: -1.5cm;
+  margin-left: 9cm;
+  padding: 8px 15px;
+  background: gray;
+  font-weight: 700;
+}
+}
+@media only screen and (max-width:500px){
+.box {
+  padding: 10px 50px 30px 50px;
+  border-style: solid;
+  border-color: black;
+  background: rgb(32, 28, 28);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0cm;
+  margin-right: 0cm;
+}
+#skip {
+  margin-bottom: -1.5cm;
+  margin-left: 7cm;
+  padding: 8px 15px;
+  background: gray;
+  font-weight: 700;
+}
+#feedback {
+  border-style: solid;
+  border-color: grey;
+  height: 3cm;
+  width: 8cm;
+}
+#feedbackbtn {
+  padding: 10px 50px;
+  background: gray;
+  margin-top: 0.5em;
+  margin-left: 2cm;
+  font-weight: 700;
+}
+}
+@media only screen and (min-width:750px) and (max-width:800px){
+.box {
+  padding: 10px 50px 30px 50px;
+  border-style: solid;
+  border-color: black;
+  background: rgb(32, 28, 28);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4cm;
+  margin-right: 4cm;
+}
+#skip {
+  margin-bottom: -1.5cm;
+  margin-left: 9cm;
+  padding: 8px 15px;
+  background: gray;
+  font-weight: 700;
+}
+#feedback {
+  border-style: solid;
+  border-color: grey;
+  height: 3cm;
+  width: 8cm;
+}
+#feedbackbtn {
+  padding: 10px 50px;
+  background: gray;
+  margin-top: 0.5em;
+  margin-left: 2cm;
+  font-weight: 700;
+}
+}
+@media only screen and (min-width:900px) and (max-width:1100px){
+.box {
+  padding: 10px 50px 30px 50px;
+  border-style: solid;
+  border-color: black;
+  background: rgb(32, 28, 28);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4cm;
+  margin-right: 4cm;
+}
+#skip {
+  margin-bottom: -1.5cm;
+  margin-left: 16cm;
+  padding: 8px 15px;
+  background: gray;
+  font-weight: 700;
+}
+#feedback {
+  border-style: solid;
+  border-color: grey;
+  height: 3cm;
+  width: 8cm;
+}
+#feedbackbtn {
+  padding: 10px 50px;
+  background: gray;
+  margin-top: 0.5em;
+  margin-left: 2cm;
+  font-weight: 700;
+}
 }
 </style>
