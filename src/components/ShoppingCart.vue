@@ -26,7 +26,7 @@
               </ul>
             </div>
           </div>
-          <button v-on:click="checkout" class="btn btn-primary" type="button">Checkout</button>
+          <button  @click="checkout" class="btn btn-primary" type="button">Checkout</button>
       </div>
       <Emptycart v-else />
       </div>
@@ -36,16 +36,17 @@
 <script>
 import Emptycart from './Emptycart.vue'
 import Header from './Header.vue'
+import swal from 'sweetalert'
 export default {
   name: "Cart",
   data() {
     return {
-      item: 0
+      item: 0,
     };
   },
   components:{
       Emptycart,
-      Header
+      Header,
   },
   methods: {
     addToCart(item) {
@@ -54,7 +55,21 @@ export default {
     removeItem(item) {
       this.$store.dispatch("removeItem", item);
     },
-  },
+    checkout() {
+    swal({
+   title: "Good job!",
+   text: "Your order has been placed sucessfully",
+   icon: "success",
+   button: "OK"
+    })
+    .then((value) => {
+      if(value) {
+        this.$router.push({name:'Finalpage'})
+      }
+    }
+    )
+    }
+    },
   computed: {
     cartItems() {
       return this.$store.state.cartItems;
@@ -80,7 +95,7 @@ h4{
   margin-top:2cm;
 }
 .btn-primary{
-  margin-left: 3cm;
+  margin-left: 3.5cm;
 }
 .price{
   font-size:18px;

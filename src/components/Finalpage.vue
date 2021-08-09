@@ -1,5 +1,8 @@
 <template>
 <div>
+  <div>
+    <Header />
+  </div>
   <link
     href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     rel="stylesheet"
@@ -47,7 +50,11 @@
 </template>
 
 <script>
+import Header from './Header.vue'
 export default {
+  components:{
+    Header
+  },
   methods: {
     skip() {
       this.$router.push({ name: "Swiggy" });
@@ -72,6 +79,7 @@ export default {
   background-clip: text;
   color: transparent;
   font-family: "Itim";
+  margin-top:2cm;
 }
 #finalhead1 {
   text-align: center;
@@ -117,8 +125,8 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 3cm;
-  margin-right: 3cm;
+  margin-left: 12cm;
+  margin-right: 12cm;
 }
 
 .starbox {
