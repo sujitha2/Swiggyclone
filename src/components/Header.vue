@@ -9,7 +9,7 @@
     crossorigin="anonymous"/>
 <div class="title">
 <div class="logo">
- <div id="a"><img id="logo" src="https://cdn.worldvectorlogo.com/logos/swiggy-1.svg"></div>
+ <div id="a"><img id="logo" @click="swiggy"  src="https://cdn.worldvectorlogo.com/logos/swiggy-1.svg"></div>
  </div>
  <div class="parent">
  <div id="a">
@@ -45,6 +45,9 @@ export default {
     },
      search(){
       this.$router.push({name: 'Searchbar'})
+    },
+    swiggy(){
+       this.$router.push({name: 'Swiggy'})
     }
     },
     props:["names"],
