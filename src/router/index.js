@@ -5,7 +5,6 @@ import hotelpage from '../components/Hotelpage.vue'
 import finalpage from '../components/Finalpage.vue'
 import shoppingcart from '../components/ShoppingCart.vue'
 import header from '../components/Header.vue'
-import empty from '../components/Emptycart.vue'
 import Search from '../components/Searchbar.vue'
 import details from '../components/Details.vue'
 
@@ -37,10 +36,6 @@ const routes = [
   {
     name: 'Finalpage',
     component: finalpage
-  },
-  {
-    name:'Emptycart',
-    component:empty
   },
   {
     name:'Signup',
