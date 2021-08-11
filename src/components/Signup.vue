@@ -2,36 +2,41 @@
 <div>
   <h2 id="head">Get Started with Swiggy !</h2>
   <form id="form1" return @submit.stop.prevent="signup()">
-      <input required id="name" v-model="names" placeholder="Name" />
+      <input required id="name" v-model="form.names" placeholder="Name" />
       <br /><br />
       <h6>Select the gender:</h6>
-      <input required id="g1" type="radio" value="Female" name="grp" /> Female
-      <input required id="g2" type="radio" value="Male" name="grp" /> Male <br /><br />
-      <input id="phno" v-model="phone" placeholder="Phone Number" />
+      <input required id="g1" type="radio" v-model="form.gender" value="Female" name="grp" /> Female
+      <input required id="g2" type="radio" v-model="form.gender" value="Male" name="grp" /> Male <br /><br />
+      <input id="phno" v-model="form.phone" placeholder="Phone Number" />
       <br /><br />
-      <input required id="address" v-model="address" placeholder="Address" />
+      <input required id="address" v-model="form.address" placeholder="Address" />
       <br /><br />
-      <input id="username" v-model="username" placeholder="Username" />
+      <input id="username" v-model="form.username" placeholder="Username" />
       <label id="labuser" style="color: red; visibility: hidden">Username and Password cannot be same</label>
       <br />
-      <input id="password" type = "password" v-model="password" placeholder="Password" />
+      <input id="password" type = "password" v-model="form.password" placeholder="Password" />
       <label id="labpass" style="color: red; visibility: hidden">Password should be alteast 8 characters long</label>
       <br />
-      <button id="button" type="submit">Signup</button>
+      <button id="button" @click="postdata" type="submit">Signup</button>
   </form>
 </div>
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name:'Signup',
   data(){
     return{
+      form : {
       names:'',
+      gender:'',
       username:'',
       password:'',
       phone:'',
       address:'',
+      },
+      props:["signup"],
     }
   },
   methods: {
@@ -68,6 +73,15 @@ export default {
         this.$router.push({name: 'Hotelpage'})
       }
     },
+    postdata(){
+      axios.post('https://jsonplaceholder.typicode.com/posts',this.form).then((response) => {
+        console.log(response.data)
+        this.props.signup = this.form.names
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+    }
   },
 };
 </script>
@@ -89,30 +103,35 @@ export default {
   border-style: outset;
   height:30px;
   width:6cm;
+  outline:none;
 }
 #phno{
   border: 2px solid rgb(0,0,49);
   border-style: outset;
   height:30px;
   width:6cm;
+  outline:none;
 }
 #username{
   border: 2px solid rgb(0,0,49);
   border-style: outset;
   height:30px;
   width:6cm;
+  outline:none;
 }
 #password{
   border: 2px solid rgb(0,0,49);
   border-style: outset;
   height:30px;
   width:6cm;
+  outline:none;
 }  
 #address{
   border: 2px solid rgb(0,0,49);
   border-style: outset;
   height:30px;
   width:6cm;
+  outline:none;
 }
 #form1{
   margin-left:5cm;

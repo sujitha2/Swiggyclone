@@ -50,12 +50,10 @@ export default {
        this.$router.push({name: 'Swiggy'})
     }
     },
-    props:["names"],
   data(){
     return{
       showPopup: false,
       signup:' Signup ',
-
     }
     },
     computed:{
